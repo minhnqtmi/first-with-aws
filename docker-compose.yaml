@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    container_name: nodeapp1
+    volumes:
+      - ./:/app
+      - /app/node_modules # Remove this if you have pure JS dependencies
+    ports:
+      - "4000:3000"
+
+      
